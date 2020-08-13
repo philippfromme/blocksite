@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Without discipline, there can be no freedom.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .left, .right {
+        display: flex;
+        align-items: center;
+        flex-basis: 0;
+        flex-grow: 1;
+        padding: 1rem;
+      }
+
+      .left {
+        justify-content: flex-end;
+        background-color: blue;
+        color: white;
+      }
+
+      .right {
+        position: relative;
+        color: blue;
+      }
+
+      h1 {
+        font-family: 'Roboto Mono', monospace;
+      }
+
+      .reveal {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        animation-name: reveal;
+        animation-duration: 3s;
+      }
+
+      @keyframes reveal {
+        from {
+          background-color: blue;
+        }
+        to {
+          background-color: transparent;
+        }
+      }
+
+      .dot {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        bottom: 3rem;
+        right: 3rem;
+        background: blue;
+        box-shadow: 0 0 1rem 1rem blue;
+        border-radius: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left">
+      <h1>Without discipline,</h1>
+    </div>
+    <div class="right">
+      <h1>there can be no freedom.</h1>
+      <div class="reveal"></div>
+    </div>
+    <div class="dot"></div>
+  </body>
+</html>
